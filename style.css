@@ -1,101 +1,174 @@
+:root {
+  --main-bg: #fafbfc;
+  --card-bg: #fff;
+  --primary: #222;
+  --accent: #0055ff;
+  --muted: #888;
+  --border: #ebedf0;
+  --shadow: 0 2px 12px 0 rgba(0,0,0,0.05);
+}
+
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #222;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--primary);
+  min-height: 100vh;
 }
 
 header {
-  background: #003366;
-  color: #fff;
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1.5rem 1rem;
+  background: var(--main-bg);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -1px;
+  color: var(--primary);
 }
 
 header h2 {
-  margin: 0.5rem 0 0 0;
+  font-size: 1.3rem;
   font-weight: 400;
-  font-size: 1.25rem;
+  margin: 0 0 1.6rem 0;
+  color: var(--muted);
 }
 
 .about-us-label {
-  margin-top: 1.5rem;
   font-size: 1.1rem;
-  background: #fff;
-  color: #003366;
-  display: inline-block;
-  padding: 0.3rem 1.2rem;
-  border-radius: 999px;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  color: var(--accent);
+  background: transparent;
+  letter-spacing: .2em;
+  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
+  max-width: 720px;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
 .about-section {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
-  background: #fff;
-  margin: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-  padding: 1rem;
-  gap: 1.5rem;
+  gap: 2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 2.2rem 0 0 0;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s;
 }
 
-.about-section img.about-img {
-  max-width: 220px;
-  width: 100%;
-  border-radius: 8px;
+.about-section:hover {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+}
+
+.about-img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
   background: #eee;
 }
 
 .about-text {
   flex: 1;
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h3 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.2em;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.about-text p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary);
+  opacity: 0.93;
+  line-height: 1.65;
 }
 
 .long-editable-section {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-  padding: 2rem 1.5rem;
-  margin: 2rem 0;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 2.5rem 0 0 0;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 1px solid var(--border);
+  min-height: 320px;
 }
 
 .long-editable-section .long-text {
-  min-height: 300px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--primary);
+}
+
+.long-editable-section ul {
+  margin: 1em 0 1em 2em;
+  padding: 0;
 }
 
 .end-img {
-  margin: 1.3rem 0;
+  margin: 1.5rem 0;
   max-width: 100%;
-  border-radius: 8px;
-  background: #eee;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
   display: block;
 }
 
 footer {
   text-align: center;
-  background: #003366;
-  color: #fff;
-  padding: 1rem 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 2rem 0 1.2rem 0;
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  letter-spacing: .02em;
+  border-top: 1px solid var(--border);
 }
 
 [contenteditable="true"]:focus {
-  outline: 2px solid #0077cc;
-  background: #f0faff;
+  outline: 2px solid var(--accent);
+  background: #f0f7ff;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.3rem;
+  }
+
+  .about-img {
+    width: 100%;
+    max-width: 240px;
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+  }
+  .long-editable-section {
+    padding: 1.2rem;
+  }
 }
