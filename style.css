@@ -1,0 +1,101 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.about-us-label {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  background: #fff;
+  color: #003366;
+  display: inline-block;
+  padding: 0.3rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.about-section img.about-img {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.long-editable-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.long-editable-section .long-text {
+  min-height: 300px;
+}
+
+.end-img {
+  margin: 1.3rem 0;
+  max-width: 100%;
+  border-radius: 8px;
+  background: #eee;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid #0077cc;
+  background: #f0faff;
+}
